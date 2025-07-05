@@ -16,13 +16,13 @@
 
 ## 📌 Table of Contents
 
-- [✨ Features](#-features)
-- [🛠️ Tech Stack](#-tech-stack)
-- [📁 Folder Structure](#-folder-structure)
-- [⚙️ Installation](#-installation)
-- [🚀 Usage](#-usage)
-- [📬 Contact](#-contact)
-- [📄 License](#-license)
+- [✨ Features](#✨-features)
+- [🛠️ Tech Stack](#🛠️-tech-stack)
+- [📁 Folder Structure](#📁-folder-structure)
+- [⚙️ Installation](#⚙️-installation)
+- [🚀 Usage](#🚀-usage)
+- [📬 Contact](#📬-contact)
+- [📄 License](#📄-license)
 
 ---
 
@@ -60,77 +60,18 @@
 
 ## 📁 Folder Structure
 
+```text
 Study-Notion/
-├── client/ # React Frontend
-│ ├── components/
-│ ├── pages/
-│ ├── redux/
-│ └── utils/
-├── server/ # Node.js Backend
-│ ├── config/
-│ ├── controllers/
-│ ├── models/
-│ ├── routes/
-│ └── middlewares/
+├── client/               # React Frontend
+│   ├── components/
+│   ├── pages/
+│   ├── redux/
+│   └── utils/
+├── server/               # Node.js Backend
+│   ├── config/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   └── middlewares/
 ├── .env
 └── README.md
-
-
-
----
-
-## ⚙️ Installation
-
-### 1️⃣ Clone the Repository
-```bash
-git clone https://github.com/iammilindpatel/Study-Notion.git
-cd Study-Notion
-2️⃣ Install Dependencies
-Backend
-bash
-Copy
-Edit
-cd server
-npm install
-Frontend
-bash
-Copy
-Edit
-cd ../client
-npm install
-3️⃣ Set Up Environment Variables
-Create a .env file in the server folder:
-
-env
-Copy
-Edit
-MONGO_URI=your_mongodb_url
-JWT_SECRET=your_jwt_secret
-RAZORPAY_KEY_ID=your_razorpay_id
-RAZORPAY_KEY_SECRET=your_razorpay_secret
-CLOUDINARY_CLOUD_NAME=your_cloud_name
-CLOUDINARY_API_KEY=your_api_key
-CLOUDINARY_API_SECRET=your_api_secret
-EMAIL_USER=your_email
-EMAIL_PASS=your_email_password
-4️⃣ Start the App
-bash
-Copy
-Edit
-npm run dev
-➡️ The app will now be running at:
-
-Frontend: http://localhost:3000
-
-Backend: http://localhost:4000
-
-🚀 Usage
-🧑‍🎓 Students: Browse, enroll, and review courses.
-
-🧑‍🏫 Instructors: Create, manage, and monetize courses.
-
-🧑‍💼 Admins: Manage platform-wide data, users, and revenue.
-
-🖼️ Screenshots (Optional)
-Add screenshots or screen recordings of dashboards, forms, and flow here if needed.
-
