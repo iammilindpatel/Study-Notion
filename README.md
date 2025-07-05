@@ -6,11 +6,6 @@
   A modern <strong>Full-Stack EdTech Platform</strong> built using the <code>MERN Stack</code> for seamless learning, teaching, and course management.  
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Status-In%20Progress-blue?style=flat-square"/>
-  <img src="https://img.shields.io/github/license/iammilindpatel/Study-Notion?style=flat-square"/>
-  <img src="https://img.shields.io/github/languages/top/iammilindpatel/Study-Notion?style=flat-square"/>
-</p>
 
 ---
 
