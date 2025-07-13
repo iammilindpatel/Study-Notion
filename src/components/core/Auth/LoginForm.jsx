@@ -4,10 +4,12 @@ import { Link, useNavigate } from "react-router-dom"
 import { FcGoogle } from "react-icons/fc"
 import { toast } from 'react-hot-toast';
 import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 
 function LoginForm({setIsLoggedIn}) {
   const navigate = useNavigate()
+  const dispatch = useDispatch();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -34,7 +36,7 @@ function LoginForm({setIsLoggedIn}) {
         console.log("Printing the formData ");
         console.log(formData)
         navigate("/dashboard/my-profile");
-        setAccountType(toString(accountType));
+        dispatch(setAccountTypeRedux(toString(accountType)));
         
         
     // event.preventDefault()
