@@ -9,7 +9,7 @@ import Signup from "./pages/Signup"
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Dashboard from "./pages/Dashboard";
-import PrivateRoute from "./components/core/Auth/PrivateRoute";
+// import PrivateRoute from "./components/core/Auth/PrivateRoute";
 import Error from "./pages/Error"
 import { useDispatch, useSelector } from "react-redux";
 import MyProfile from "./components/core/Dashboard/MyProfile";
@@ -68,9 +68,9 @@ function App() {
     <Route path="/tags/:tag" element = {<TagPage/>}   />
     <Route path="/categories/:category" element = {<CategoryPage/>}   />
 
-    <Route  path="signup"  element={  <OpenRoute>  <Signup setIsLoggedIn={setIsLoggedIn} />  </OpenRoute>  } />
-    <Route  path="login" element={ <OpenRoute>  <Login setIsLoggedIn={setIsLoggedIn} /> </OpenRoute>  }  />
-    <Route path="about"  element={ <OpenRoute>  <About />  </OpenRoute> } />
+    <Route  path="signup"  element={  <Signup setIsLoggedIn={setIsLoggedIn} />  } />
+    <Route  path="login" element={   <Login setIsLoggedIn={setIsLoggedIn} /> }  />
+    <Route path="about"  element={ <OpenRoute isLoggedIn={isLoggedIn}>  <About />  </OpenRoute> } />
     <Route path="/contact" element={<Contact />} />
 
     <Route path="/dashboard/my-profile" element={ <Dashboard setIsLoggedIn={setIsLoggedIn} />} >

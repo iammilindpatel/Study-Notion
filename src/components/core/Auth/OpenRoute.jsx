@@ -2,10 +2,10 @@
 import { useSelector } from "react-redux"
 import { Navigate } from "react-router-dom"
 
-function OpenRoute({ children }) {
-  const { token } = useSelector((state) => state.auth)
+function OpenRoute({ children, isLoggedIn }) {
+  const {  } = useSelector((state) => state.auth)
 
-  if (token === null) {
+  if (isLoggedIn === false) {
     return children
   } else {
     return <Navigate to="/dashboard/my-profile" />

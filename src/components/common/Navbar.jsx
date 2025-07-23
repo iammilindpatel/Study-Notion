@@ -4,18 +4,18 @@ import { Link, matchPath, Outlet } from 'react-router-dom'
 import {NavbarLinks} from "../../data/navbar-links"
 import { useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import {AiOutlineShoppingCart} from "react-icons/ai"
+// import {AiOutlineShoppingCart} from "react-icons/ai"
 // import ProfileDropDown from '../core/Auth/ProfileDropDown'
 // import { apiConnector } from '../../services/apiconnector'
 // import { categories } from '../../services/apis'
 import {IoIosArrowDropdownCircle} from "react-icons/io"
 import { toast } from 'react-hot-toast'
 import userprofile from "../../assets/Images/profile dropdown/user.png"
-import Dashboard from '../../pages/Dashboard'
+// import Dashboard from '../../pages/Dashboard'
 import { VscDashboard } from "react-icons/vsc"
 import { BiLogOutCircle } from "react-icons/bi";
 import { setUser } from '../../slices/profileSlice'
-import  accountType  from '../../slices/profileSlice'
+// import  accountType  from '../../slices/profileSlice'
 
 
 const subLinks = [
@@ -33,8 +33,8 @@ const subLinks = [
 
 const Navbar = (props) => {
     // console.log("Printing base url: ",process.env.REACT_APP_BASE_URL);
-    const {token} = useSelector( (state) => state.auth );
-    const {user} = useSelector( (state) => state.profile );
+    // const {token} = useSelector( (state) => state.auth );
+    // const {user} = useSelector( (state) => state.profile );
     const location = useLocation();
     const {} = useSelector( (state) => state.auth );
     let isLoggedIn = props.isLoggedIn
