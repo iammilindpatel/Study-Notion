@@ -36,7 +36,7 @@ function LoginForm({setIsLoggedIn}) {
         console.log("Printing the formData ");
         console.log(formData)
         navigate("/dashboard/my-profile");
-        dispatch(setAccountTypeRedux(toString(accountType)));
+        dispatch(setAccountTypeRedux(accountType));
         
         
     // event.preventDefault()

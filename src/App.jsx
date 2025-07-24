@@ -28,8 +28,8 @@ import  MyCourses  from "./components/core/Dashboard/MyCourses";
 
 function App() {
 
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
+  // const dispatch = useDispatch();
+  // const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const {accountType} = useSelector((state) => state.profile)
 
@@ -74,7 +74,7 @@ function App() {
     <Route path="/contact" element={<Contact />} />
 
     <Route path="/dashboard/my-profile" element={ <Dashboard setIsLoggedIn={setIsLoggedIn} />} >
-          <Route path="/dashboard/my-profile" element={<MyProfile  />} />
+          <Route path="/dashboard/my-profile" element={<MyProfile/>} />
           <Route path="/dashboard/my-profile/enrolled-courses" element={<EnrolledCourses />} />
         { accountType === "student" &&  ( 
           <Route path="/dashboard/my-profile/cart" element={<Cart />} />
