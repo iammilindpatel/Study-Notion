@@ -4,7 +4,7 @@ import { Navigate } from 'react-router-dom';
 
 const PrivateRoute = ({children,isLoggedIn}) => {
     // isLoggedIn = false;
-    if (isLoggedIn = false) {
+    if (isLoggedIn ) {
         return children;        
     }
     else {

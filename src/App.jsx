@@ -9,7 +9,6 @@ import Signup from "./pages/Signup"
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Dashboard from "./pages/Dashboard";
-// import PrivateRoute from "./components/core/Auth/PrivateRoute";
 import Error from "./pages/Error"
 import { useDispatch, useSelector } from "react-redux";
 import MyProfile from "./components/core/Dashboard/MyProfile";
@@ -24,6 +23,7 @@ import { useContext } from "react";
 import { useSearchParams, useLocation } from "react-router-dom";
 import AddCourse from "./components/core/Dashboard/AddCourse";
 import  MyCourses  from "./components/core/Dashboard/MyCourses";
+import PrivateRoute from "./components/core/Auth/PrivateRoute";
 // import { account_Type } from "./utils/constants";
 
 function App() {
@@ -68,21 +68,21 @@ function App() {
     <Route path="/tags/:tag" element = {<TagPage/>}   />
     <Route path="/categories/:category" element = {<CategoryPage/>}   />
 
-    <Route  path="signup"  element={  <Signup setIsLoggedIn={setIsLoggedIn} />  } />
-    <Route  path="login" element={   <Login setIsLoggedIn={setIsLoggedIn} /> }  />
-    <Route path="about"  element={ <OpenRoute isLoggedIn={isLoggedIn}>  <About />  </OpenRoute> } />
+    <Route  path="/signup"  element={  <Signup setIsLoggedIn={setIsLoggedIn} />  } />
+    <Route  path="/login" element={   <Login setIsLoggedIn={setIsLoggedIn} /> }  />
+    <Route path="/about"  element={ <OpenRoute isLoggedIn={isLoggedIn}>  <About />  </OpenRoute> } />
     <Route path="/contact" element={<Contact />} />
 
-    <Route path="/dashboard/my-profile" element={ <Dashboard setIsLoggedIn={setIsLoggedIn} />} >
-          <Route path="/dashboard/my-profile" element={<MyProfile/>} />
-          <Route path="/dashboard/my-profile/enrolled-courses" element={<EnrolledCourses />} />
+    <Route path="/dashboard/*" element={ <PrivateRoute isLoggedIn={isLoggedIn}> <Dashboard setIsLoggedIn={setIsLoggedIn} /> </PrivateRoute>} >
+          <Route path="my-profile" element={<MyProfile/>} />
+          <Route path="enrolled-courses" element={<EnrolledCourses />} />
         { accountType === "student" &&  ( 
-          <Route path="/dashboard/my-profile/cart" element={<Cart />} />
+          <Route path="cart" element={<Cart />} />
         )}
         {  accountType === "instructor" && (
           <>
-            <Route path="/dashboard/my-profile/add-course" element={<AddCourse />} />
-            <Route path="/dashboard/my-profile/my-courses" element={<MyCourses/>} />
+            <Route path="add-course" element={<AddCourse />} />
+            <Route path="my-courses" element={<MyCourses/>} />
           </>
           )
         } 
