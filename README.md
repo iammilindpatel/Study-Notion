@@ -1,5 +1,3 @@
-create a readme.md for my project by taking style from different github repositories and it should also include folder structure and some animated type ui look
-
 
 
 <h1 align="center">
