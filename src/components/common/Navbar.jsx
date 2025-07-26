@@ -47,45 +47,42 @@ const Navbar = (props) => {
     }
 
     const [showMenu, setShowMenu] = useState(false);
-    useEffect(() => {
-        console.log(showMenu);
-        setShowMenu(showMenu);
-    })
+    // useEffect(() => {
+    //     console.log(showMenu);
+    //     setShowMenu(showMenu);
+    // },[showMenu]);
 
-    const handleButtonToggle = (showMenu) => {
-        setShowMenu(!showMenu);
-        console.log("Printing showMenu: ",showMenu);
+    const handleButtonToggle = () => {
+        setShowMenu((prev) => !prev);
+        console.log("Button clicked, showMenu is now: ", showMenu);
     };
 
 
   return (
 <div className='flex bg-avocado-100 h-14 items-center justify-center border-b-[1px] border-b-richblack-700'>
-    <div className='flex w-11/12 max-w-maxContent items-center justify-between relative'>
+    <div className='flex w-11/12 max-w-maxContent items-center justify-between relative '>
         {/* Image */}
       <Link to="/">
         <img src={logo} width={160} height={42} loading='lazy'/>
       </Link>
 
       {/* Nav Links */}
-      <nav className='lg:inline-block hidden {showMenu ? "w-[100%] h-[100%] left-0 top-10" : "lg:inline-block hidden"} pl-2 pr-2'>
-        <ul className='flex gap-x-6 text-richblack-25 flex-col lg:flex-row top-0'>
-        <li>hello</li>
-        <li>oneui</li>
+      <nav className= {`${showMenu ? "flex absolute z-1000 rounded-xl p-4 flex-col gap-4 bg-black opacity-80 w-[290px] top-[100%] right-[-2%]" : "hidden lg:inline-block"}`}>
+        <ul className=' flex gap-x-6 text-richblack-25 flex-col lg:flex-row top-0'>
         {
             NavbarLinks.map( (link, index) => (
                  <li key={index}>
                     {
                         link.title === "Catalog" ? (
-                            <div className='relative flex items-center gap-2 group'>
+                            <div className='relative flex items-center gap-2 group  lg:flex'>
                                 <p>{link.title}</p>
                                 <IoIosArrowDropdownCircle/>
 
-                                <div className='invisible absolute left-[52%] lg:left-[45%]
-                                    translate-x-[-45%] translate-y-[42%] lg:translate-y-[45%]
-                                    top-0
+                                <div className='invisible absolute left-[12%] lg:left-[45%]
+                                    translate-x-[-36%] translate-y-[32%] lg:translate-y-[45%] top-0 
                                 flex flex-col rounded-md bg-richblack-5 p-4 text-richblack-900
-                                 transition-all duration-200 group-hover:visible opacity-0
-                                group-hover:opacity-100 lg:w-[250px] z-2'>
+                                transition-all duration-200 group-hover:visible opacity-0
+                                group-hover:opacity-100 lg:w-[250px] z-2 '>
 
                                     <div className='absolute left-[50%] top-0
                                     translate-x-[50%]
@@ -191,8 +188,8 @@ const Navbar = (props) => {
             
         </div>
         <div className="lg:hidden inline-block">
-            <button className='bg-white cursor-pointer' onClick={handleButtonToggle}>
-              <GiHamburgerMenu />
+            <button className='bg-white text-amber-500 pt-2 pb-2  rounded-lg cursor-pointer' onClick={handleButtonToggle}>
+              <GiHamburgerMenu className='w-[35px] h-[20px]' />
             </button>
         </div>
     </div>
