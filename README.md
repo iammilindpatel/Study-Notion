@@ -97,5 +97,3 @@ src/
 └── [index.css](http://_vscodecontentref_/3)         # CSS variables and base styles
 
 
-
-hello
