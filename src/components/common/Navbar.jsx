@@ -16,6 +16,7 @@ import { VscDashboard } from "react-icons/vsc"
 import { BiLogOutCircle } from "react-icons/bi";
 import { setUser } from '../../slices/profileSlice'
 // import  accountType  from '../../slices/profileSlice'
+import { GiHamburgerMenu } from "react-icons/gi";
 
 
 const subLinks = [
@@ -45,17 +46,31 @@ const Navbar = (props) => {
         return matchPath({path:route}, location.pathname);
     }
 
+    const [showMenu, setShowMenu] = useState(false);
+    useEffect(() => {
+        console.log(showMenu);
+        setShowMenu(showMenu);
+    })
+
+    const handleButtonToggle = (showMenu) => {
+        setShowMenu(!showMenu);
+        console.log("Printing showMenu: ",showMenu);
+    };
+
+
   return (
 <div className='flex bg-avocado-100 h-14 items-center justify-center border-b-[1px] border-b-richblack-700'>
-    <div className='flex w-11/12 max-w-maxContent items-center justify-between'>
+    <div className='flex w-11/12 max-w-maxContent items-center justify-between relative'>
         {/* Image */}
       <Link to="/">
         <img src={logo} width={160} height={42} loading='lazy'/>
       </Link>
 
       {/* Nav Links */}
-      <nav>
-        <ul className='flex gap-x-6 text-richblack-25'>
+      <nav className='lg:inline-block hidden {showMenu ? "w-[100%] h-[100%] left-0 top-10" : "lg:inline-block hidden"} pl-2 pr-2'>
+        <ul className='flex gap-x-6 text-richblack-25 flex-col lg:flex-row top-0'>
+        <li>hello</li>
+        <li>oneui</li>
         {
             NavbarLinks.map( (link, index) => (
                  <li key={index}>
@@ -172,7 +187,13 @@ const Navbar = (props) => {
                 </Link>
                 
             }
+        
             
+        </div>
+        <div className="lg:hidden inline-block">
+            <button className='bg-white cursor-pointer' onClick={handleButtonToggle}>
+              <GiHamburgerMenu />
+            </button>
         </div>
     </div>
 </div>
