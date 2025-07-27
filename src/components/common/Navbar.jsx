@@ -78,11 +78,11 @@ const Navbar = (props) => {
                                 <p>{link.title}</p>
                                 <IoIosArrowDropdownCircle/>
 
-                                <div className='invisible absolute left-[12%] lg:left-[45%]
-                                    translate-x-[-36%] translate-y-[32%] lg:translate-y-[45%] top-0 
+                                <div className='invisible absolute left-[12%] lg:left-[20%]
+                                    translate-x-[-36%] translate-y-[32%] lg:translate-y-[35%] top-0 
                                 flex flex-col rounded-md bg-richblack-5 p-4 text-richblack-900
                                 transition-all duration-200 group-hover:visible opacity-0
-                                group-hover:opacity-100 lg:w-[250px] z-2 '>
+                                group-hover:opacity-100 lg:w-[250px] z-200 '>
 
                                     <div className='absolute left-[50%] top-0
                                     translate-x-[50%]
