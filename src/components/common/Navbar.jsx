@@ -43,6 +43,7 @@ const Navbar = (props) => {
     setUser(true);
 
     const matchRoute = (route) => {
+        console.log("Matching route: ", route, " with location: ", location.pathname);
         return matchPath({path:route}, location.pathname);
     }
 
@@ -124,8 +125,6 @@ const Navbar = (props) => {
 
         {/* Login/SignUp/Dashboard */}
         <div className='flex gap-x-4 items-center'>
-
-
             
             {
                 !isLoggedIn && 
