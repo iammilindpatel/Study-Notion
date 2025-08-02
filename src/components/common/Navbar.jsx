@@ -43,7 +43,6 @@ const Navbar = (props) => {
     setUser(true);
 
     const matchRoute = (route) => {
-        console.log("Matching route: ", route, " with location: ", location.pathname);
         return matchPath({path:route}, location.pathname);
     }
 
