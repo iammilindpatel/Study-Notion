@@ -1,6 +1,7 @@
 import {FaArrowRight} from "react-icons/fa"
 import {Link} from "react-router-dom"
 import HighlightText from '../components/core/HomePage/HighlightText'
+import './../../src/App.css'
 
 import CTAButton from "../../src/components/common/Button"
 import Banner from "../assets/Images/banner.mp4"
@@ -35,7 +36,7 @@ const Home = ({isLoggedIn}) => {
             <HighlightText text={"Coding Skills"} mycolor={"defined"} />
         </div>
 
-        <div className=' mt-4 w-[90%] text-center text-lg font-bold text-richblack-300'>
+        <div className=' mt-4 w-[90%] text-center text-lg font-bold text-richblack-300 '>
             With our online coding courses, you can learn at your own pace, from anywhere in the world, and get access to a wealth of resources, including hands-on projects, quizzes, and personalized feedback from instructors. 
         </div>
 
@@ -143,7 +144,7 @@ const Home = ({isLoggedIn}) => {
                     <div className='h-[150px]'></div>
                     <div className='flex flex-row gap-7 text-white '>
                         <CTAButton active={true} linkto={"/signup"}>
-                            <div className='flex items-center gap-3' >
+                            <div className='flex items-center gap-3 ' >
                                 Explore Full Catalog
                                 <FaArrowRight />
                             </div>
