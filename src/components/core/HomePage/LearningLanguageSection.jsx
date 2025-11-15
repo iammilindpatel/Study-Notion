@@ -14,7 +14,7 @@ const LearningLanguageSection = () => {
                 <HighlightText text={" learning any language"} mycolor={"defined"}  />
             </div>
 
-            <div className='text-center text-richblack-600 mx-auto text-base font-medium w-[60%]'>
+            <div className='text-center text-richblack-600 mx-auto text-base font-medium w-[60%] animate-on-scroll'>
             Using spin making learning multiple languages easy. with 20+ languages realistic voice-over, progress tracking, custom schedule and more.
             </div>
 
