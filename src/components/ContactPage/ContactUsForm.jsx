@@ -13,11 +13,11 @@ const ContactUsForm = () => {
   } = useForm()
 
   const submitContactForm = async (data) => {
-    // console.log("Form Data - ", data)
+    console.log("Form Data - ", data)
     try {
       setLoading(true)
       const res = {status: "ok"};
-      // console.log("Email Res - ", res)
+      console.log("Email Res - ", res)
       setLoading(false)
     } catch (error) {
       console.log("ERROR MESSAGE - ", error.message)
@@ -101,7 +101,7 @@ const ContactUsForm = () => {
         </label>
 
         <div className="flex gap-5">
-          <div className="flex w-[84px] flex-col gap-2">
+          <div className="flex w-[114px] flex-col gap-2">
             <select
               type="text"
               name="firstname"

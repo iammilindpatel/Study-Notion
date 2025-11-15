@@ -35,6 +35,29 @@ html, body {
     scrollbar-width: none;
     /* display: none; */
   }
+  
+.animate-on-scroll {
+  /* Link to the keyframes */
+  animation: fadeUp both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
+  
+
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0 ;
+    transform: translateY(10px) scale(0.5);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+
   @keyframes spinner-bulqg1 {
     0% {
       clip-path: polygon(50% 50%, 0% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
