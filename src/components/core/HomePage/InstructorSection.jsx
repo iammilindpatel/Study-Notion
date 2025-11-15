@@ -1,4 +1,5 @@
 import React from 'react'
+import './../../../../src/App.css'
 import Instructor from "../../../assets/Images/Instructor.png"
 import HighlightText from './HighlightText'
 import CTAButton from "../../common/Button"
@@ -18,7 +19,7 @@ const InstructorSection = () => {
         </div>
 
         <div className='w-[50%] flex flex-col gap-10'>
-            <div className='text-4xl font-semobold w-[50%]'>
+            <div className='text-4xl font-semobold w-[50%] animate-on-scroll'>
                 Become an
                 <HighlightText text={"Instructor"} mycolor={"defined"} />
             </div>
@@ -29,7 +30,7 @@ const InstructorSection = () => {
 
             <div className='w-fit'>
                 <CTAButton active={true} linkto={"/signup"}>
-                    <div className='flex flex-row gap-2 items-center'>
+                    <div className='flex flex-row gap-2 items-center animate-on-scroll'>
                         Start Learning Today
                         <FaArrowRight />
                     </div>
