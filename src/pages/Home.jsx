@@ -16,7 +16,7 @@ const Home = ({isLoggedIn}) => {
   return (
     <div>
       {/*Section1  */}
-      <div className='relative flex-col mx-auto flex w-5/6 max-w-maxContent items-center 
+      <div className='relative flex flex-col mx-auto w-5/6 max-w-maxContent items-center 
       text-white justify-between mt-16'>
 
         <Link to={"/signup"}>
