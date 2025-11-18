@@ -19,11 +19,11 @@ root.render(
   <React.StrictMode>
   <Provider store = {store}>
     <BrowserRouter>
-        <AppContextProvider>
-          <App />
-        </AppContextProvider>
-        <Toaster/>
-      </BrowserRouter>
+      <AppContextProvider>
+        <App />
+      </AppContextProvider>
+      <Toaster/>
+    </BrowserRouter>
   </Provider>
     
     
