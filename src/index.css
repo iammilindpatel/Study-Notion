@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 @theme{
 
   --animate-on-scroll: var(className:"animate-on-scroll")

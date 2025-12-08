@@ -15,7 +15,7 @@ import ExploreMore from '../components/core/HomePage/ExploreMore'
 const Home = ({isLoggedIn}) => {
   return (
     <div>
-      {/*Section1  */}
+            {/*Section1  */}
       <div className='relative flex flex-col mx-auto w-5/6 max-w-maxContent items-center 
       text-white justify-between mt-16'>
 
@@ -68,7 +68,7 @@ const Home = ({isLoggedIn}) => {
                     heading={
                         <div className='text-3xl font-semibold'>
                             Unlock Your
-                            <HighlightText text={"coding potential "} />
+                            <HighlightText text={"coding potential"} />
                             with our online courses
                         </div>
                     }
@@ -164,7 +164,7 @@ const Home = ({isLoggedIn}) => {
 
             <div className='mx-auto w-5/6 max-w-maxContent flex flex-col items-center justify-between gap-5'>
 
-                <div className='flex flex-row gap-5 mb-10 mt-[95px]'>
+                <div className='flex flex-row gap-5 mb-8 mt-[95px]'>
                     <div className='text-3xl font-semibold w-[45%]'>
                         Get the Skills you need for a
                         <HighlightText text={"Job that is in demand"} mycolor={"defined"}/>
