@@ -2,8 +2,6 @@ import { RiEditBoxLine } from "react-icons/ri"
 import { useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
 import profpic from "../../../assets/Images/profile dropdown/user.png"
-
-import { formattedDate } from "../../../utils/dateFormatter"
 import IconBtn from "../../common/IconBtn"
 
 export default function MyProfile() {
