@@ -153,7 +153,7 @@ const Navbar = (props) => {
                     <div className='flex items-center gap-x-1 text-richblack-100 py-[8px] px-[12px]'>
                         <img src={userprofile} className="w-[38px]" ></img>
                     </div>
-                    <div className='relative opacity-0 group-hover:opacity-[100%] duration-300 ease-in '>
+                    <div className='relative opacity-0 group-hover:opacity-[100%] duration-50 ease-in '>
                         <Link className='absolute rounded-xl p-4 flex-col gap-4 bg-stone-100 opacity-80 z-100 w-[290px] top-[100%] right-[-15%]'>
                             <div className='flex gap-4 '>
                                 <img src={userprofile} className="w-[32px]" ></img>
@@ -161,7 +161,7 @@ const Navbar = (props) => {
                             </div>
                             <div className='w-full mt-4 bg-[#ccc] h-0.5'></div>
                             <Link  to="/dashboard/my-profile"
-                            className='flex group w-full mt-1 rounded-md my-1 items-center gap-x-2 py-2 px-4 text-md text-richblack-700 hover:bg-richblack-700 hover:text-richblack-25 transition-smooth duration-300 ease-in'
+                            className='flex group w-full mt-1 rounded-md my-1 items-center gap-x-2 py-2 px-4 text-md text-richblack-700 hover:bg-richblack-700 hover:text-richblack-25 transition-smooth duration-50 ease-in'
                             onClick={() => {setIsLoggedIn(true)}} >
                                 <VscDashboard/>
                                 Dashboard
