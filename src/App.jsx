@@ -73,25 +73,18 @@ function App() {
     <Route path="/about"  element={ <OpenRoute isLoggedIn={isLoggedIn}>  <About />  </OpenRoute> } />
     <Route path="/contact" element={<Contact />} />
 
-    <Route path="/dashboard/*" element={ <PrivateRoute isLoggedIn={isLoggedIn}> <Dashboard setIsLoggedIn={setIsLoggedIn} /> </PrivateRoute>} >
+    <Route path="/dashboard/*" 
+    element={ <PrivateRoute isLoggedIn={isLoggedIn}> <Dashboard setIsLoggedIn={setIsLoggedIn} /> </PrivateRoute>} >
           <Route path="my-profile" element={<MyProfile/>} />
           <Route path="enrolled-courses" element={<EnrolledCourses />} />
-        { accountType === "student" &&  ( 
           <Route path="cart" element={<Cart />} />
-        )}
-        {  accountType === "instructor" && (
-          <>
-            <Route path="add-course" element={<AddCourse />} />
-            <Route path="my-courses" element={<MyCourses/>} />
-          </>
-          )
-        } 
+          <Route path="add-course" element={<AddCourse />} />
+          <Route path="my-courses" element={<MyCourses/>} />
     </Route>
 
   
     <Route path="*" element={<Error />} />
-
-
+    
   </Routes>
 
 </div>
