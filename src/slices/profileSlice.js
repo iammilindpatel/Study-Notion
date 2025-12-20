@@ -3,7 +3,7 @@ import { useState } from "react";
 
 
 const initialState = {
- 
+    user: null,
     // accountType: localStorage.getItem(accountType) ?(localStorage.getItem(accountType)) : "student",
     accountType: localStorage.getItem("accountType") || "student",
 };
@@ -26,5 +26,5 @@ const profileSlice = createSlice({
     },
 });
 
-export const {setUser, setLoading, setAccountTypeRedux} = profileSlice.actions;
-export default profileSlice.reducer;
+export const {setUser, setAccountTypeRedux} = profileSlice.actions;
+export default profileSlice.reducer;    
