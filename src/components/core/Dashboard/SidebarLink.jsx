@@ -9,6 +9,9 @@ export default function SidebarLink({ link, iconName}) {
   const dispatch = useDispatch()
 
   const matchRoute = (route) => {
+    console.log("pathname:", location.pathname);
+    // console.log(matchPath({ path: route }, location.pathname));
+
     return matchPath({ path: route }, location.pathname)
   }
 console.log("sidebarlink:", link)
@@ -25,7 +28,9 @@ console.log("sidebarlink:", link)
         className={`absolute left-0 top-0 h-full w-[0.15rem] bg-yellow-50 ${
           matchRoute(link.path) ? "opacity-100" : "opacity-0"
         }`}
-      ></span>
+      >
+        {console.log("link.path:", link.path)};
+      </span>
       <div className="flex items-center gap-x-2" >
         {/* Icon Goes Here */}
         <Icon className="text-lg" />
