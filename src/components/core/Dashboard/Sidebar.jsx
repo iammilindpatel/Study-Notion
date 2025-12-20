@@ -24,16 +24,13 @@ export default function Sidebar({setIsLoggedIn}) {
       )
     }
 
-    function sidebarclick(){
-
-    }
 console.log(accountType);
   return (
     <div>
       <div className="flex h-[calc(100vh-3.5rem)] min-w-[220px] flex-col border-r-[1px] border-r-richblack-700 bg-richblack-800 py-10">
         <div className="flex flex-col">
-        {/* console.log(link) */}
           {sidebarLinks.map((link) => {
+            {/* console.log("link in sidebar:", link.type); */}
             if (link.type && accountType !== link.type) return null
             return (
               <SidebarLink key={link.id} link={link} iconName={link.icon} onClick = { () => navigate(link.path)} />
@@ -53,7 +50,7 @@ console.log(accountType);
                   setIsLoggedIn(false); 
                   navigate("/");
                   toast.error("Logged Out"); 
-                }  ,
+                },
                 btn2Handler: () => setConfirmationModal(null),
               })
             }
