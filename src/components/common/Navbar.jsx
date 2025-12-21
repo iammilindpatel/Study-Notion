@@ -14,7 +14,6 @@ import userprofile from "../../assets/Images/profile dropdown/user.png"
 // import Dashboard from '../../pages/Dashboard'
 import { VscDashboard } from "react-icons/vsc"
 import { BiLogOutCircle } from "react-icons/bi";
-import { setUser } from '../../slices/profileSlice'
 // import  accountType  from '../../slices/profileSlice'
 import { GiHamburgerMenu } from "react-icons/gi";
 
@@ -40,7 +39,6 @@ const Navbar = (props) => {
     const {} = useSelector( (state) => state.auth );
     let isLoggedIn = props.isLoggedIn
     let setIsLoggedIn = props.setIsLoggedIn
-    setUser(true);
 
     const matchRoute = (route) => {
         return matchPath({path:route}, location.pathname);
