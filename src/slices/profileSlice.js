@@ -3,7 +3,6 @@ import { useState } from "react";
 
 
 const initialState = {
-    user: null,
     // accountType: localStorage.getItem(accountType) ?(localStorage.getItem(accountType)) : "student",
     accountType: localStorage.getItem("accountType") || "student",
 };
@@ -13,10 +12,6 @@ const profileSlice = createSlice({
     name:"profile",
     initialState: initialState,
     reducers: {
-        setUser(state, value) {
-            state.user = value.payload;
-        },
-
         setAccountTypeRedux(state, value) {
             const type = value.payload.toLowerCase();
             state.accountType = type;
@@ -26,5 +21,5 @@ const profileSlice = createSlice({
     },
 });
 
-export const {setUser, setAccountTypeRedux} = profileSlice.actions;
+export const {setAccountTypeRedux} = profileSlice.actions;
 export default profileSlice.reducer;    
