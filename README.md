@@ -95,3 +95,6 @@ src/
 └── [index.css](http://_vscodecontentref_/3)         # CSS variables and base styles
 
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
