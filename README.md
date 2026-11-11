@@ -17,6 +17,9 @@
   <img src="https://img.shields.io/badge/TailwindCSS-3.0-06B6D4?logo=tailwindcss" />
   <img src="https://img.shields.io/badge/Redux-Toolkit-764ABC?logo=redux" />
 </p>
+<p align="center">
+    [![License: MIT]] <img src= "https://img.shields.io/badge/License-MIT-yellow.svg" />    
+</p>
 
 ---
 
@@ -95,6 +98,5 @@ src/
 └── [index.css](http://_vscodecontentref_/3)         # CSS variables and base styles
 
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
